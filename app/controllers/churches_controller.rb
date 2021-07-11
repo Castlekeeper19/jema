@@ -13,6 +13,7 @@ class ChurchesController < ApplicationController
   end
 
   def show
+    @church = Church.find(params[:id])
   end
 
   def new
