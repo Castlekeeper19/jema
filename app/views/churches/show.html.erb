@@ -1,4 +1,4 @@
-<div class="show-banner nav-fix" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%=@workout.photo.attached? ? cl_image_path(@workout.photo.key) : image_path("https://source.unsplash.com/1200x800/?#{@workout.category}") %>);">
+<div class="show-banner nav-fix" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%=@church.photo.attached? ? cl_image_path(@church.photo.key) : image_path("https://source.unsplash.com/1200x800/?church") %>);">
   <div class="container d-flex flex-column justify-content-center">
     <h1><%= @church.name %></h1>
     <p><%= @church.name.capitalize %></p>
@@ -23,7 +23,7 @@
     <div class="book-card">
       <div class="align-items-center bg-secondary p-4 rounded" style="box-shadow: 3px 3px 10px rgba(0, 0, 0, .2)" id="override">
         <h3 class="border-bottom">Contact this church! </h3>
-        <h2 class="mt-4" style="text-align: right; font-weight: bold">¥<%= @church.name %></h2>
+        <h2 class="mt-4" style="text-align: right; font-weight: bold"><%= @church.name %></h2>
 
       </div>
     </div>

@@ -14,6 +14,11 @@ class ChurchesController < ApplicationController
 
   def show
     @church = Church.find(params[:id])
+    @markers = [
+      {
+        lat: @church.latitude,
+        lng: @church.longitude
+      }]
   end
 
   def new
