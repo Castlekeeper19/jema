@@ -1,0 +1,80 @@
+.cards {
+  width: 450px;
+}
+
+.card-workout {
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+  background: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: #E1E5E9;
+  }
+}
+
+.card-workout .workout-photo {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+}
+
+.card-workout h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-workout p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+}
+
+.card-workout .card-workout-infos {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    color: $gray;
+  }
+
+.workout-card {
+  position: relative;
+}
+
+.card-text-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .card-category {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, .8)
+  }
+  h2 {
+    margin-top: 8px;
+  }
+}
+
+.card-text-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  .trainer-info {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+  }
+  .card-price {
+    // margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  h5 {
+    font-weight: bold;
+  }
+}

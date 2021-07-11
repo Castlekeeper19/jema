@@ -3,6 +3,13 @@ class ChurchesController < ApplicationController
 
   def index
     @churches = Church.all
+
+    @markers = @churches.geocoded.map do |church|
+      {
+        lat: church.latitude,
+        lng: church.longitude
+      }
+    end
   end
 
   def show

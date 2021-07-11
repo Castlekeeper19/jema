@@ -1,0 +1,32 @@
+.map-workouts {
+  // position: absolute;
+  position: fixed;
+  // idth: 100vw;
+  height: 60vh;
+  top: 0px;
+  z-index: 2;
+}
+.map-text {
+  // position: absolute;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
+  h5 {
+    margin-top: 5px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
