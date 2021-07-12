@@ -2,7 +2,7 @@
   width: 450px;
 }
 
-.card-workout {
+.card-church {
   overflow: hidden;
   height: 150px;
   width: 100%;
@@ -10,30 +10,31 @@
   box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
   display: flex;
   align-items: center;
+  padding: 8px;
   &:hover {
     background-color: #E1E5E9;
   }
 }
 
-.card-workout .workout-photo {
+.card-church .church-photo {
   height: 100%;
   width: 150px;
   object-fit: cover;
 }
 
-.card-workout h2 {
+.card-church h2 {
   font-size: 16px;
   font-weight: bold;
 }
 
-.card-workout p {
+.card-church p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
 }
 
-.card-workout .card-workout-infos {
+.card-church .card-church-infos {
     width: 100%;
     padding: 16px;
     display: flex;
@@ -41,7 +42,7 @@
     color: $gray;
   }
 
-.workout-card {
+.church-card {
   position: relative;
 }
 

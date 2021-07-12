@@ -1,8 +1,8 @@
 <%= link_to church_path(church) do %>
-<div class="workout-card">
-  <div class="card-workout mb-4 rounded">
-    <img src="<%= church.photo.attached? ? cl_image_path(church.photo.key, width: 150, height: 150) : image_path("https://source.unsplash.com/150x150/?#{church.location}") %>" class="workout-photo">
-    <div class="card-workout-infos">
+<div class="church-card">
+  <div class="card-church mb-4 rounded">
+    <img src="<%= church.photo.attached? ? cl_image_path(church.photo.key, width: 150, height: 150) : image_path("https://source.unsplash.com/150x150/?#{church.location}") %>" class="church-photo">
+    <div class="card-church-infos">
       <div class="card-text-left">
         <p><%= church.location %></p>
         <h2><strong><%= church.name %></strong></h2>
