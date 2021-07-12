@@ -37,8 +37,13 @@
 .search-change {
   // max-width: 500px;
   margin: 0 auto;
+  position: sticky;
+  top: 65px;
+  width: 100%;
+  padding: 16px;
   background-color: #e1e5ea;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+  z-index: 2;
   input {
     border-radius: 4px !important;
   }

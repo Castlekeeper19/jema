@@ -1,32 +1,17 @@
-<div class="banner-church-index nav-fix">
-  <div class="container">
-    <div class="banner-text">
-      <h1>Churches</h1>
-      <%# <p>Embark on a new adventure with us</p> %>
-      <p>Find a church near you</p>
-    </div>
-  </div>
+<div class="search-change rounded">
+  <h2 class="ml-3">Churches Found:</h2>
+  <%= render "shared/search" %>
 </div>
-
-<div class="container py-3">
-
-    <div class="search-results mt-5">
-      <div class="cards">
-        <h1 class="mb-5" style="text-shadow: 1px 1px 3px rgba(0,0,0, 20%);">Churches in your area...</h1>
-        <% @churches.each do |church| %>
-            <%= render 'index-card', church: church %>
-        <% end %>
-      </div>
-
-      <div class="sidebar-index ml-5">
-        <div class="search-change rounded">
-          <h2 class="ml-3">Search Again:</h2>
-          <%= render "shared/search" %>
-        </div>
-        <div class="map-position">
-          <%= render "shared/map", styling: "width: 100%; height: 60vh;", class_name: "map-index" %>
-        </div>
-      </div>
+<div>
+  <div class="search-results mt-5">
+    <div class="cards">
+      <% @churches.each do |church| %>
+          <%= render 'index-card', church: church %>
+      <% end %>
+    </div>
+    <div class="map-position">
+      <%= render "shared/map", styling: "width: 100%; height: 100vh;", class_name: "map-index" %>
+    </div>
   </div>
 </div>
 <%= render "shared/footer" %>
