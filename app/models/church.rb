@@ -4,7 +4,7 @@ class Church < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
   has_one_attached :photo
 
-  searchkick
+  # searchkick
 
    include PgSearch::Model
     pg_search_scope :search_by_longitude_and_latitude,
