@@ -1,9 +1,9 @@
-<div class="search search-container" id="search-form">
+<div class="search search-container" id="search-form search">
   <%= form_tag churches_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "round",
-      placeholder: "Search by location or activity..."
+      placeholder: "Find a church near you..."
     %>
     <%= submit_tag "", class: "corner" %>
   <% end %>
