@@ -7,7 +7,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+  map.fitBounds(bounds, { padding: 0, maxZoom: 15, duration: 0 });
 };
 
 const initMapbox = () => {
@@ -29,7 +29,7 @@ const initMapbox = () => {
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window);
 
-      new mapboxgl.Marker({ "color": "#00b862" })
+      new mapboxgl.Marker({ "color": "#B82714" })
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)
         .addTo(map);

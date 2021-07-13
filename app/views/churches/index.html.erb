@@ -1,6 +1,13 @@
 <div class="search-change rounded">
-  <h2 class="ml-3">Churches Found:</h2>
+  <div class= "search-header">
+    <h2 class="ml-3">Churches Found:</h2>
+    <div>
+      <%= link_to "Add A Church", new_church_path, class: "btn btn-gradient"  %>
+      <%= link_to "Log In/Register",new_user_session_path, class: "btn btn-gradient" %>
+    </div>
+  </div>
   <%= render "shared/search" %>
+
 </div>
 <div>
   <div class="search-results mt-5">
