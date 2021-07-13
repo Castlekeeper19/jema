@@ -1,0 +1,12 @@
+<%= simple_form_for @church do |f| %>
+  <%= f.input :name, label: "Church Name" %>
+  <%= f.input :address1, label: "Address 1"%>
+  <%= f.input :address2, label: "Address 2"%>
+  <%= f.input :city, label: "City"%>
+  <%= f.input :prefecture, label: "Prefecture"%>
+  <%= f.input :post_code, label: "Post Code"%>
+  <%= f.input :pastor, label: "Pastor Name"%>
+  <%= f.input :website, label: "Website Address"%>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Submit", class: "btn btn-gradient" %>
+<% end %>

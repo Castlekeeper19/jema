@@ -4,9 +4,9 @@ require 'date'
 puts 'clearing database'
 # Booking.destroy_all
 # Workout.destroy_all
-# User.destroy_all
-puts 'Creating Users & Workouts'
-locations = ['Omotesando', 'Akihabara', 'Fujisawa', 'Saitama', 'Setagaya', 'Ueno', 'Meguro', 'Shibuya', 'Shinagawa', 'Kanda', 'Shinjuku', 'Mitaka']
+Church.destroy_all
+puts 'Creating Churches'
+cities = ['Omotesando', 'Akihabara', 'Fujisawa', 'Saitama', 'Setagaya', 'Ueno', 'Meguro', 'Shibuya', 'Shinagawa', 'Kanda', 'Shinjuku', 'Mitaka']
 
 
 # 10.times do
@@ -17,14 +17,20 @@ locations = ['Omotesando', 'Akihabara', 'Fujisawa', 'Saitama', 'Setagaya', 'Ueno
 #   )
 # end
 
-puts "Created #{User.count} Users"
+# puts "Created #{User.count} Users"
 
-10.times do
-    location = locations.sample
+20.times do
+    city = cities.sample
     club = Church::CHURCHNAMES.sample
     Church.create!(
-    location: ("#{location}, Tokyo"),
-    name:   ("#{location} Christian #{club}"),
+    address1: (101...499).to_a.sample,
+    city: "#{city}",
+    prefecture: "Tokyo",
+    location: ("#{city}, Tokyo"),
+    post_code: (((100..200).to_a.sample.to_s + "-" + (4000..6000).to_a.sample.to_s)),
+    name:   ("#{city} Christian #{club}"),
+    pastor: Faker::Name.first_name + " " + Faker::Name.last_name,
+    website: "www.#{city.downcase}#{club.downcase}.com"
   )
 end
 
