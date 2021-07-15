@@ -5,7 +5,7 @@ class ChurchesController < ApplicationController
   def index
     if params[:query].present?
       # @churches = Church.all.search_by_location(params[:query])
-      @churches = Church.near(params[:query], 10)
+      @churches = Church.near(params[:query], 10, limit: 10)
 
     else
       @churches = Church.all
@@ -36,6 +36,7 @@ class ChurchesController < ApplicationController
 
   def create
     @church = Church.new(church_params)
+    @church.geocode
     if @church.save
       redirect_to churches_path
     else
