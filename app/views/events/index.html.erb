@@ -1,6 +1,9 @@
 <div class="banner events-banner nav-fix">
   <h1 >Events:</h1>
-  <%= link_to "Add Event", new_event_path, class: "btn btn-ghost"  %>
+  <div>
+    <%= link_to "Add Event", new_event_path, class: "btn btn-ghost"  %>
+    <%= link_to "Log In   ",new_user_session_path, class: "btn btn-ghost" %>
+  </div>
 </div>
 <div class = "events-container">
   <h2>JEMA FEATURED EVENTS</h2>
@@ -12,7 +15,7 @@
         <h2><%= event.name %></h2>
         <h4 class="text-secondary"><%= event.location %></h4>
         <p class="text-primary"> <%= event.church.name %> </p>
-        <p><i><%= event.start.strftime("%B #{event.start.day.ordinalize}, %-l:%M %p") %></i></p>
+        <p ><i><%= event.start.strftime("%B #{event.start.day.ordinalize}, %-l:%M %p") %></i></p>
       </div>
     <% end %>
     <% end %>

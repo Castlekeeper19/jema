@@ -1,15 +1,15 @@
 .btn-ghost {
-  color: #4A4A4A;
+  color: #black;
+  background: radial-gradient(circle, rgba(244,185,78,1) 0%, rgba(251,184,59,1) 35%, rgba(235,160,21,1) 100%);
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 
 .btn-ghost:hover {
-  opacity: 1;
+  background: radial-gradient(circle, rgba(232,134,47,1) 0%, rgba(233,123,26,1) 35%, rgba(218,115,24,1) 100%);
 }
 
 .btn-flat {
