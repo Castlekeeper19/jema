@@ -17,13 +17,16 @@
 
 .map-position {
   position: sticky;
-  top: 125px;
-  height: 100%;
+  top: 0px;
+  height: 40%;
+  margin-top: -12px;
   width: 100%;
+  margin-bottom: 24px;
+  margin-right: 12px;
+  border-radius: 12px;
 }
 
 .map {
-  margin-top: 24px;
   height: 300px;
   width: 200px;
   background-color: aquamarine;

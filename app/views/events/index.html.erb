@@ -1,8 +1,8 @@
 <div class="banner events-banner nav-fix">
   <h1 >Events:</h1>
   <div>
-    <%= link_to "Add Event", new_event_path, class: "btn btn-ghost"  %>
-    <%= link_to "Log In   ",new_user_session_path, class: "btn btn-ghost" %>
+    <%= link_to "Add Event", new_event_path, class: "btn btn-ghost mx-1"  %>
+    <%= link_to "Log In   ",new_user_session_path, class: "btn btn-ghost mx-1" %>
   </div>
 </div>
 <div class = "events-container">
@@ -13,9 +13,9 @@
       <img src="<%= event.photo.attached? ? cl_image_path(event.photo.key, width: 150, height: 150) : image_path("https://source.unsplash.com/150x150/?#{event.location}") %>" class="event-photo">
       <div class= "event-info">
         <h2><%= event.name %></h2>
-        <h4 class="text-secondary"><%= event.location %></h4>
-        <p class="text-primary"> <%= event.church.name %> </p>
-        <p ><i><%= event.start.strftime("%B #{event.start.day.ordinalize}, %-l:%M %p") %></i></p>
+        <h4 class="text-secondary px-1"><%= event.location %></h4>
+        <p class="text-primary px-1"> <%= event.church.name %> </p>
+        <p  class= ><i><%= event.start.strftime("%B #{event.start.day.ordinalize}, %-l:%M %p") %></i></p>
       </div>
     <% end %>
     <% end %>
