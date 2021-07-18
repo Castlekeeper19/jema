@@ -11,14 +11,54 @@
   <!-- Home Page Body -->
 
 <div class= "home-container">
-  <div class= "home-content container">
+  <div class= "home-content">
     <h2>Networking and equipping to make Jesus known in Japan</h2>
     <p>JEMA networks and equips its over 1,000 members to make disciples of Jesus Christ through its leadership team, commissions, representatives, and endorsed ministries. JEMA is composed of over 40 Japan based mission agencies and their personnel, other missionaries or tentmakers who do not belong to those agencies, and individuals living outside Japan who are interested in reaching Japanese for Christ.</p>
-    <%= link_to "LEARN MORE", "#"  %>
+    <ul>
+      <li>JEMA Ministries</li>
+      <li>Find Events</li>
+      <li>Church Directory</li>
+    </ul>
   </div>
-  <div class = "home-signup">
-    <h3>Sign up for JEMA emails</h3>
 
-  </div>
+
+
+    <div class="skills">
+          <h1 class="subtitle about" id="websites-tag">OUR MISSION</h1>
+          <p>JEMA’s mission is to serve Protestant missionaries seeking to bring the good news of Jesus Christ to people in Japan. It does that by networking and equipping its members to make disciples for Christ.</p>
+        <div class="skills-container">
+            <ul>
+                <li class="transition2">
+                    <div class="icon-container one">
+                      <a href="https://kyoro-manager.herokuapp.com/" target="_blank"> <%= image_tag "temple_river.jpg", alt: "Kyoro" %></a>
+                    </div>
+                    <a href="https://kyoro-manager.herokuapp.com/" target="_blank"><h3 class="skill-title">Free Resources</h3></a>
+                    <p class="featured-desc skill-desc">Kyoro helps managers track of their team's engagement level using Slack integration and feedback analysis, so they can react quickly and meet their team's needs.
+Built by a team of 4 developers during a 10-day product sprint.</p>
+
+                </li>
+                <li class="transition2">
+                    <div class="icon-container two">
+                       <a href="https://connectrainer.herokuapp.com/" target="_blank"> <%= image_tag "temple_river.jpg", alt: "ConnecTrainer" %></a>
+                    </div>
+                    <a href="https://connectrainer.herokuapp.com/" target="_blank"> <h3 class="skill-title">Japan Harvest</h3></a>
+                    <p class="featured-desc skill-desc">ConnecTrainer is a platform where users can book a workout session with a trainer, or become trainers themselves and offer their services to customers.
+
+Built by a team of 4 developers during a 5-day product sprint.</p>
+
+                </li>
+                <li class="transition2">
+                    <div class="icon-container three">
+                      <a href="https://monease.herokuapp.com/" target="_blank"> <%= image_tag "temple_river.jpg", alt: "MonEase" %> </a>
+                    </div>
+                   <a href="https://monease.herokuapp.com/" target="_blank">  <h3 class="skill-title">About JEMA</h3> </a>
+                    <p class="featured-desc skill-desc">You work hard for your money, shouldn't your money work hard for you?  MonEase helps new investors learn how to save for the things they want and keep what they've earned. A personal passion project, work in progress. </p>
+
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
 <%= render "shared/footer" %>

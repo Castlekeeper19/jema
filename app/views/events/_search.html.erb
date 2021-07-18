@@ -1,0 +1,10 @@
+<div class="search search-container" id="search-form search">
+  <%= form_tag events_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "round",
+      placeholder: "Find a event near you..."
+    %>
+    <%= submit_tag "", class: "corner" %>
+  <% end %>
+</div>
