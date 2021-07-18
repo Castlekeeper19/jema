@@ -9,10 +9,12 @@
 
 
   .event-card {
+
     color: black;
     height: 25vh;
     margin: 1em;
-    background: lightgray;
+    background: rgb(250,243,243);
+    background: radial-gradient(circle, rgba(250,243,243,1) 0%, rgba(250,246,246,1) 35%, rgba(249,249,249,1) 100%);
     border-radius: .5em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
     display:flex;
@@ -27,6 +29,10 @@
       height: 100%;
       object-fit: cover;
       border-radius: 1em 0 0 1em;
+    }
+
+    h3, p {
+      font-family: 'Commissioner', sans-serif;
     }
 
      p:last-child {
@@ -55,7 +61,7 @@
 
       img {
       width: 100%;
-      height: 50%;
+      height: 40%;
       object-fit: cover;
       border-radius: .5em .5em 0 0;
     }

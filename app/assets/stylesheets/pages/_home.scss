@@ -154,6 +154,24 @@
 }
 
 
+.portfolio {
+    background: #F7F7F7;
+}
+
+.portfolio-container a img {
+    border-radius: 1em;
+
+}
+
+.portfolio-container {
+  margin: 2em;
+}
+
+.carousel-item img {
+  height: 300px;
+}
+
+
 @media only screen and (min-width: 800px) {
   .home-container {
     text-align: justify;
@@ -192,6 +210,13 @@
         width: 80%;
     }
 
+    .portfolio {
+        padding-top: 7em;
+    }
+    .portfolio-container img {
+        margin-left: 2em;
+    }
+
 }
 
 @media only screen and (min-width: 1050px) {
@@ -208,6 +233,15 @@
 
         }
       }
+
+  .portfolio img {
+        float: right;
+        max-width: 500px;
+    }
+
+    section {
+        padding: 4em;
+    }
 
 }
 
