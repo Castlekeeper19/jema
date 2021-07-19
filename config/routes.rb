@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/dashboard', to: 'dashboard#index'
+  get '/about', to: 'pages#about'
+  get '/benefits', to: 'pages#benefits'
+  get '/contact', to: 'pages#contact'
 end

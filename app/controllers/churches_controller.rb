@@ -54,6 +54,7 @@ class ChurchesController < ApplicationController
   end
 
   def update
+    @church.geocode
     if @church.update(church_params)
       redirect_to church_path(@church)
       else
