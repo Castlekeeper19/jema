@@ -10,10 +10,10 @@ class Church < ApplicationRecord
   # searchkick
 
    include PgSearch::Model
-    pg_search_scope :search_by_longitude_and_latitude,
-      against: [ :longitude, :latitude ],
+    pg_search_scope :search_by_longitude_and_name,
+      against: [ :location, :name ],
     using: {
-      tsearch: { prefix: true }
+      tsearch: { prefix: true, any_word: true }
     }
 
     def address

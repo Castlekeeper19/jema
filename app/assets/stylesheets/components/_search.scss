@@ -96,3 +96,15 @@
 //   width: 100%;
 // }
 
+@media only screen and (min-width: 800px) {
+
+  .search-change {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .round {
+    width: 45vw;
+    position: relative;
+  }
+}

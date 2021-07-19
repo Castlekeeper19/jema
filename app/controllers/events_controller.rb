@@ -9,6 +9,9 @@ class EventsController < ApplicationController
         OR churches.name ILIKE :query \
       "
       @events = Event.joins(:church).where(sql_query, query: "%#{params[:query]}%")
+
+    elsif params[:location].present?
+       @events = Event.near(params[:location], 5, limit: 10)
     else
       @events = Event.all
     end
@@ -31,6 +34,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
+    @event.geocode
     @event.church = Church.all.sample
     if @event.save
       redirect_to events_path
@@ -49,7 +53,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :description, :start, :photo)
+    params.require(:event).permit(:name, :description, :start, :photo, :location, :church_id)
   end
 
 end

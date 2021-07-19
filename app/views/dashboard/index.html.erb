@@ -1,10 +1,62 @@
-<div class= "nav-fix">
+<div class= "dashboard nav-fix">
 
-<ul>
-  <% @my_churches.each do |church| %>
-   <li>  <%= church.name %></li>
-   <%= link_to "Add Worship Service", new_church_service_path(church)  %>
-  <% end %>
-</ul>
+
+    <div class="content-wrapper">
+        <% if user_signed_in? %>
+          <div class="sidebar">
+            <%= render 'shared/sidebar' %>
+          </div>
+        <% end %>
+      </div>
+  <div class = "dashboard-content">
+    <h1>CHURCHES</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Church Name</th>
+          <th scope="col">Add Service</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% count = 0 %>
+          <% @my_churches.each do |church| %>
+          <tr>
+            <% count += 1 %>
+            <th scope="row"> <%= count %> </th>
+            <td><%= church.name %></td>
+            <td> <%= link_to "Add Service", new_church_service_path(church)  %></td>
+            <td>  <%= link_to "Edit", edit_church_path(church)  %>  </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <h1>EVENTS</h1>
+     <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Event Name</th>
+          <th scope="col">Add Service</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% count = 0 %>
+          <% @my_events.each do |event| %>
+          <tr>
+            <% count += 1 %>
+            <th scope="row"> <%= count %> </th>
+            <td><%= event.name %></td>
+            <td><%= event.name %></td>
+            <td>  <%= link_to "Edit", edit_event_path(event)  %>  </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
 
 </div>
+<%= render "shared/footer" %>

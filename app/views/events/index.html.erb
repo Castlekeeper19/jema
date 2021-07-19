@@ -7,21 +7,22 @@
 </div>
 <div class="search-change rounded">
     <%= render "search" %>
+    <%= render "locations" %>
 </div>
 
 <div class = "events-container">
   <h2>JEMA FEATURED EVENTS</h2>
   <div class= "event-cards">
     <% @events.each do |event| %>
-    <%= link_to event_path(event), class: "event-card" do  %>
-      <img src="<%= event.photo.attached? ? cl_image_path(event.photo.key, width: 150, height: 150) : image_path("https://source.unsplash.com/150x150/?#{event.location}") %>" class="event-photo">
-      <div class= "event-info">
-        <h2><%= event.name %></h2>
-        <h4 class="text-secondary px-1"><%= event.location %></h4>
-        <p class="text-primary px-1"> <%= event.church.name %> </p>
-        <p  class= ><i><%= event.start.strftime("%B #{event.start.day.ordinalize}, %-l:%M %p") %></i></p>
-      </div>
-    <% end %>
+      <%= link_to event_path(event), class: "event-card" do  %>
+        <img src="<%= event.photo.attached? ? cl_image_path(event.photo.key, width: 150, height: 150) : image_path("https://source.unsplash.com/150x150/?#{event.location}") %>" class="event-photo">
+        <div class= "event-info">
+          <h2><%= event.name %></h2>
+          <h4 class="text-secondary px-1"><%= event.location %></h4>
+          <p class="text-primary px-1"> <%= event.church.name %> </p>
+          <p  class= ><i><%= event.start.strftime("%B #{event.start.day.ordinalize}, %-l:%M %p") %></i></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
