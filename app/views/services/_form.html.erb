@@ -1,9 +1,9 @@
 <%= simple_form_for [@church, @service] do |f| %>
-  <%= f.input :name, label: "Church Name" %>
-  <%= f.input :type, label: "Service Type"%>
-  <%= f.input :day, label: "Day of Week"%>
+  <%= f.input :name, label: "Service Name" %>
+  <%= f.input :worship_type, label: "Service Type", collection: ["Worship Service", "Bible Study", "Prayer Gathering", "Youth Gathering", "Social Event", "Out Reach"]%>
+  <%= f.input :day, label: "Day of Week", collection: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]%>
   <%= f.input :start, label: "Start Time"%>
   <%= f.input :end, label: "End Time"%>
-  <%= f.input :language, label: "Service Language"%>
+  <%= f.input :language, as: :radio_buttons, collection: ["English", "Japanese", "Chinease", "Korean"]%>
   <%= f.submit "Submit", class: "btn btn-gradient" %>
 <% end %>

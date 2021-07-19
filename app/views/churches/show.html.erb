@@ -25,8 +25,18 @@
         <h3 class="border-bottom">Contact: </h3>
         <h2 class="mt-4" style="text-align: right; font-weight: bold"><%= @church.website %></h2>
 
+        <% @services.each do |service| %>
+      <p><%= service.name %></p>
+      <p><%= service.day %></p>
+      <p><%= service.worship_type %></p>
+      <p><%= service.language %></p>
+      <p><%= service.start.strftime("%-l:%M %p") %>  - <%= service.end.strftime("%-l:%M %p") %></p>
+    <% end %>
+
       </div>
     </div>
+
+
   </div>
 </div>
 <%= render "shared/footer" %>

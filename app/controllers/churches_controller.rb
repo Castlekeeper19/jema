@@ -21,7 +21,7 @@ class ChurchesController < ApplicationController
   end
 
   def show
-
+    @services = Service.where(church_id: @church.id)
     @markers = [
       {
         lat: @church.latitude,
