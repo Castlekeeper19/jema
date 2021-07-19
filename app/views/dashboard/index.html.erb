@@ -1,7 +1,10 @@
 <div class= "nav-fix">
-  <% @my_churches.each do |church| %>
-    <%= church.name %>
-  <% end %>
 
+<ul>
+  <% @my_churches.each do |church| %>
+   <li>  <%= church.name %></li>
+   <%= link_to "Add Worship Service", new_church_service_path(church)  %>
+  <% end %>
+</ul>
 
 </div>

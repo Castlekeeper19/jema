@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :events
-  resources :churches
+  resources :churches do
+    resources :services, only: [:new, :create, :edit, :update, :destroy]
+  end
 
   get '/dashboard', to: 'dashboard#index'
 end
