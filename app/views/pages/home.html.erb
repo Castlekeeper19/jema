@@ -1,19 +1,20 @@
 <div class="banner-container nav-fix" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "city_daytime.jpg", alt: "alttext" %>);">
   <div class="container home-text home-search">
-      <div class="position-relative">
-        <h1>Making Jesus Known in Japan and Growing Disciples</h1>
-      </div>
-        <div class="search-box">
-          <%= render "shared/search" %>
+    <div class="position-relative">
+      <h1>Making Jesus Known in Japan and Growing Disciples</h1>
+    </div>
+    <div class="search-box">
+      <%= render "shared/search" %>
     </div>
   </div>
- </div>
+</div>
   <!-- Home Page Body -->
 
 <div class= "home-container">
   <div class= "home-content">
-  </div>
+ </div>
 </div>
+
 
  <section class="featured">
         <div class="left">
@@ -21,14 +22,13 @@
                 <p class="subtitle about" id= "about-tag">About JEMA</p>
 
                 <p class="featured-desc">JEMA networks and equips its over 1,000 members to make disciples of Jesus Christ through its leadership team, commissions, representatives, and endorsed ministries. JEMA is composed of over 40 Japan based mission agencies and their personnel, other missionaries or tentmakers who do not belong to those agencies, and individuals living outside Japan who are interested in reaching Japanese for Christ.</p>
-                <%= link_to "About JEMA", about_path, class: "align-center"  %>
+                <p id ="learn-more"><%= link_to "LEARN MORE", about_path  %></p>
 
             </div>
         </div>
         <%= image_tag "street_night.jpg", alt: "alttext", class:"right transition2" %>
 
     </section>
-
 
 
     <div class="skills">
@@ -91,32 +91,6 @@
                 </div>
               </div>
             </div>
-        </div>
-
-        <div class="portfolio-container transition3">
-            <div class="portfolio-left">
-                <div class="inner">
-                    <a href="https://decisionmagazine.com/hanoi-festival-a-milestone-for-the-gospel/" target="_blank"><p class="subtitle">Hanoi, Vietnam</p> </a>
-
-                    <a href="https://decisionmagazine.com/hanoi-festival-a-milestone-for-the-gospel/" target="_blank"><p class="featured-title">Love Hanoi Festival</p></a>
-
-                    <ul>
-                      <li><strong>Role:</strong> Project Coordinator </li>
-                      <li><strong>Locations:</strong> Hanoi, Vietnam</li>
-                      <li><strong>Venue:</strong> Quần Ngựa Sports Complex</li>
-                      <li><strong>Final Event Dates:</strong> December 8th & 9th, 2017 </li>
-                      <li><strong>Final Attendance:</strong> 60,000+</li>
-                    </ul>
-                </div>
-            </div>
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <%= image_tag "temple_river.jpg", alt: "alttext", class: "d-block" %>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <div class="portfolio-container transition3">

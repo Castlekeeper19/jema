@@ -25,8 +25,14 @@
         <li class="nav-item">
           <%= link_to "Churches", churches_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Resources", "#", class: "nav-link" %>
+        <li class="nav-item dropdown">
+            <a src="#" class="nav-link" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Resources</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel">
+              <%= link_to "Growth", growth_path, class: "dropdown-item" %>
+              <%= link_to "Member Care", care_path, class: "dropdown-item" %>
+              <%= link_to "Practical", practical_path, class: "dropdown-item" %>
+              <%= link_to "Training", training_path, class: "dropdown-item" %>
+            </div>
         </li>
         <li class="nav-item">
           <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
@@ -53,8 +59,14 @@
         <li class="nav-item">
           <%= link_to "Churches", churches_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Resources", "#", class: "nav-link" %>
+          <li class="nav-item dropdown">
+            <a src="#" class="nav-link" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Resources</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel">
+              <%= link_to "Growth", growth_path, class: "dropdown-item" %>
+              <%= link_to "Member Care", care_path, class: "dropdown-item" %>
+              <%= link_to "Practical", practical_path, class: "dropdown-item" %>
+              <%= link_to "Training", training_path, class: "dropdown-item" %>
+            </div>
         </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
