@@ -22,6 +22,14 @@
     }
 }
 
+.leaders {
+  img {
+    width: 80%;
+    margin: 2em auto;
+    border-radius: 1em;
+
+  }
+}
 
 
 
@@ -63,6 +71,17 @@
     padding-top: 2em;
   }
 
+  .leaders {
+    display: grid;
+    grid-template-columns: 25% auto;
+
+    img {
+    height: 45%;
+    margin: auto;
+    object-fit: fit;
+    border-radius: 1em;
+    }
+  }
 
 }
 
