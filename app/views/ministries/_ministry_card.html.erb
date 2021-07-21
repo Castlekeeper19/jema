@@ -1,0 +1,16 @@
+<%= link_to ministry_path(ministry) do %>
+  <div class="user-card-info">
+    <div class="user-card-top">
+      <div class="user-card-background"></div>
+      <img src="<%= ministry.photo.attached? ? cl_image_path(ministry.photo.key) : image_path("https://que-akitsu.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png") %>">
+      <%# <div>
+      </div> %>
+    </div>
+    <div class="user-card-bottom">
+      <h3><%= ministry.name %></h3>
+      <div class="user-card-score" >
+        <h5> <%= ministry.category %>  </h5>
+      </div>
+    </div>
+  </div>
+<% end %>

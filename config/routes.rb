@@ -11,6 +11,13 @@ Rails.application.routes.draw do
 
 # routes to static pages
   get '/dashboard', to: 'dashboard#index'
+  get '/dashboard/churches', to: 'dashboard#churches'
+  get '/dashboard/events', to: 'dashboard#events'
+  get '/dashboard/ministries', to: 'dashboard#ministries'
+  get '/dashboard/resources', to: 'dashboard#resources'
+
+
+
   get '/about', to: 'pages#about'
   get '/benefits', to: 'pages#benefits'
   get '/contact', to: 'pages#contact'

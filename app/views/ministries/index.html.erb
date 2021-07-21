@@ -1,17 +1,21 @@
-<div class="nav-fix">
+<div class="nav-fix p-3">
   <div class="ministries jema-ministries">
     <h1>JEMA Ministries</h1>
-    <% @jemas.each do |ministry| %>
-      <h2><%= ministry.name %></h2>
-      <p> <%= ministry.description %> </p>
-    <% end %>
+    <div class="user-cards">
+      <%# @users.sort { |a,b| b.overall_total <=> a.overall_total }.each do |user| %>
+      <% @jemas.each do |ministry| %>
+          <%= render 'ministry_card', ministry: ministry %>
+        <% end %>
+    </div>
   </div>
   <div class="ministries">
     <h1>Endorssed Ministries</h1>
-    <% @ministries.each do |ministry| %>
-      <h2><%= ministry.name %></h2>
-<p> <%= ministry.description %> </p>
-    <% end %>
+    <div class="user-cards">
+      <%# @users.sort { |a,b| b.overall_total <=> a.overall_total }.each do |user| %>
+      <% @ministries.each do |ministry| %>
+          <%= render 'ministry_card', ministry: ministry %>
+        <% end %>
+    </div>
   </div>
 
 </div>

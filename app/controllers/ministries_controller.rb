@@ -7,5 +7,6 @@ class MinistriesController < ApplicationController
   end
 
   def show
+    @ministry = Ministry.find(params[:id])
   end
 end

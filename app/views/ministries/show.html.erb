@@ -1,2 +1,27 @@
-<h1>Ministries#show</h1>
-<p>Find me in app/views/ministries/show.html.erb</p>
+<div class="show-banner nav-fix" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%=@ministry.photo.attached? ? cl_image_path(@ministry.photo.key) : image_path("https://source.unsplash.com/1200x800/?ministry") %>);">
+  <div class="container d-flex flex-column justify-content-center">
+    <h1><%= @ministry.name %></h1>
+  </div>
+</div>
+<div class="container d-flex">
+  <div class="d-flex my-5">
+    <div class="church-discription mr-5">
+      <div class="church-text-info p-4 rounded">
+        <h2><%= @ministry.name %> is...</h2>
+        <p>  <%= @ministry.description %>  </p>
+        <div class="trainer-card mt-4 p-2">
+          <div class="trainer-avatar">
+            <p>  <%= @ministry.name %>  </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-card">
+      <div class="align-items-center bg-secondary p-4 rounded" style="box-shadow: 3px 3px 10px rgba(0, 0, 0, .2)" id="override">
+        <h3 class="border-bottom">Contact: </h3>
+        <h2 class="mt-4" style="text-align: right; font-weight: bold"><%= @ministry.website %></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
