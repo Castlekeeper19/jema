@@ -1,6 +1,9 @@
-<div class="nav-fix p-3">
-  <div class="ministries jema-ministries">
+<div class="banner events-banner nav-fix">
+  <h1 >MINISTRIES</h1>
+</div>
+  <div class="ministries jema-ministries px-5">
     <h1>JEMA Ministries</h1>
+    <p class="text-center">JEMA Ministries help to network and equip JEMA members: Church Planting Institute, Member Care, Women in Ministry, and Prayer Ministry. JEMA Ministries are accountable to the JEMA Leadership Team.</p>
     <div class="user-cards">
       <%# @users.sort { |a,b| b.overall_total <=> a.overall_total }.each do |user| %>
       <% @jemas.each do |ministry| %>
@@ -8,8 +11,9 @@
         <% end %>
     </div>
   </div>
-  <div class="ministries">
-    <h1>Endorssed Ministries</h1>
+  <div class="ministries px-5 mb-5">
+    <h1>Endorsed Ministries</h1>
+    <p class ="text-center">JEMA Endorsed Ministries connect with JEMA to serve the broader community in Japan when their purpose aligns with JEMA’s. They maintain their organizational freedom.</p>
     <div class="user-cards">
       <%# @users.sort { |a,b| b.overall_total <=> a.overall_total }.each do |user| %>
       <% @ministries.each do |ministry| %>
@@ -17,5 +21,4 @@
         <% end %>
     </div>
   </div>
-
-</div>
+<%= render "shared/footer" %>
