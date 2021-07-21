@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-
+skip_before_action :authenticate_user!, only: [:growth, :care, :practical, :training]
   def growth
   end
 
