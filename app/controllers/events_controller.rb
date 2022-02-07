@@ -9,12 +9,12 @@ class EventsController < ApplicationController
         OR events.location @@ :query \
         OR churches.name ILIKE :query \
       "
-      @events = Event.joins(:church).where(sql_query, query: "%#{params[:query]}%")
+      @events = policy_scope(Event).joins(:church).where(sql_query, query: "%#{params[:query]}%")
 
     elsif params[:location].present?
-       @events = Event.near(params[:location], 5, limit: 10)
+       @events = policy_scope(Event).near(params[:location], 5, limit: 10)
     else
-      @events = Event.all
+      @events = policy_scope(Event)
     end
   end
 
@@ -30,13 +30,14 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    authorize @event
   end
 
   def create
     @event = Event.new(event_params)
     @event.user = current_user
     @event.geocode
-    @event.church = Church.all.sample
+    authorize @event
     if @event.save
       redirect_to events_path
     else
@@ -47,10 +48,14 @@ class EventsController < ApplicationController
   def update
   end
 
+  def destroy
+  end
+
   private
 
   def set_event
     @event = Event.find(params[:id])
+    authorize @event
   end
 
   def event_params
