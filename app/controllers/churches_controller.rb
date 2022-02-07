@@ -7,12 +7,12 @@ class ChurchesController < ApplicationController
       sql_query = " \
         churches.name @@ :query \
       "
-      @churches = Church.where(sql_query, query: "%#{params[:query]}%")
+      @churches = policy_scope(Church).where(sql_query, query: "%#{params[:query]}%")
 
     elsif params[:location].present?
-      @churches = Church.near(params[:location], 5, limit: 10)
+      @churches = policy_scope(Church).near(params[:location], 5, limit: 10)
     else
-      @churches = Church.all
+      @churches = policy_scope(Church).order(name: :desc)
     end
 
     @markers = @churches.geocoded.map do |church|
@@ -35,12 +35,13 @@ class ChurchesController < ApplicationController
 
   def new
     @church = Church.new
-
+    authorize @church
   end
 
   def create
     @church = Church.new(church_params)
     @church.user = current_user
+    authorize @church
     @church.geocode
     if @church.save
       redirect_to churches_path
@@ -68,6 +69,7 @@ class ChurchesController < ApplicationController
 
   def set_church
     @church = Church.find(params[:id])
+    authorize @church
   end
 
   def church_params
